@@ -4,6 +4,7 @@ function toEmbed(u){var m;
  if(m=u.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{6,})/))return '<iframe src="https://www.youtube.com/embed/'+m[1]+'?autoplay=1&rel=0" allow="autoplay;fullscreen" allowfullscreen></iframe>';
  if(m=u.match(/vimeo\.com\/(?:video\/)?(\d+)/))return '<iframe src="https://player.vimeo.com/video/'+m[1]+'?autoplay=1" allow="autoplay;fullscreen" allowfullscreen></iframe>';
  if(m=u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/))return '<iframe src="https://drive.google.com/file/d/'+m[1]+'/preview" allow="autoplay;fullscreen" allowfullscreen></iframe>';
+ if(m=u.match(/^(https:\/\/customer-[a-z0-9]+\.cloudflarestream\.com\/[a-f0-9]{32})/))return '<iframe src="'+m[1]+'/iframe?autoplay=true&preload=auto&letterboxColor=transparent" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen" allowfullscreen></iframe>';
  return '<video src="'+u+'" controls autoplay playsinline></video>';}
 var PLAY='<svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><polygon points="8,5 19,12 8,19" fill="#FF5A1F"/></svg>';
 d.querySelectorAll('.vw').forEach(function(w){if(!w.querySelector('.play')&&!/PHOTO/.test(w.textContent)){var b=document.createElement('button');b.className='play vp';b.setAttribute('aria-label','Play video');b.setAttribute('data-embed',w.getAttribute('data-embed')||'');b.innerHTML=PLAY;w.appendChild(b);}});
