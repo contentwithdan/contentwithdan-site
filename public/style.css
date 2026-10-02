@@ -78,3 +78,7 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .vw .play.vp{top:50%;left:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);width:64px;height:64px}
 .vw.playing iframe,.vw.playing video,.hero.playing iframe,.hero.playing video{display:block;width:100%;border:0;border-radius:16px;background:#000;aspect-ratio:auto}
 .hero.playing{background:#000}.hero.playing iframe,.hero.playing video{height:100%!important}
+.vw .ph{height:auto!important;aspect-ratio:9/16;width:100%}
+.vw.playing{aspect-ratio:9/16;background:#000;border-radius:16px;overflow:hidden}
+.vw.playing iframe,.vw.playing video{height:100%!important;width:100%;aspect-ratio:9/16;border-radius:16px}
+#brands .g3 .vc{max-width:340px;width:100%;margin:0 auto}
