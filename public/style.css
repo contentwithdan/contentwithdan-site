@@ -82,3 +82,7 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .vw.playing{aspect-ratio:9/16;background:#000;border-radius:16px;overflow:hidden}
 .vw.playing iframe,.vw.playing video{height:100%!important;width:100%;aspect-ratio:9/16;border-radius:16px}
 #brands .g3 .vc{max-width:340px;width:100%;margin:0 auto}
+.vw{aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#1b1d22}
+.vw .th{display:block;width:100%;height:100%;object-fit:cover}
+.lg.on{border:2px solid var(--ink);border-style:solid}
+.lg.on img{width:100%;height:100%;object-fit:contain}
