@@ -99,3 +99,11 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .cell.logo{overflow:hidden}
 .more{display:flex;justify-content:center;margin:28px 0 0}
 .more span{background:#FF5A1F;color:#fff;font-weight:700;font-size:18px;padding:10px 24px;border-radius:999px;border:2px solid var(--ink)}
+.pfg{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 20px}
+.pf{position:relative}
+.pf .box{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:34px 18px 20px;overflow:hidden}
+.pf .shot{width:100%;display:block;border-radius:10px;border:1px solid #e3ded3}
+.pf .num{font:800 28px 'Bricolage Grotesque',sans-serif;margin:16px 0 0;text-align:center;letter-spacing:-.5px}
+.pf .sub{font-size:13px;text-align:center;margin:4px 0 0;padding:0;color:#5a5d63}
+@media(max-width:1000px){.pfg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pfg{grid-template-columns:1fr}}
