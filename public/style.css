@@ -107,3 +107,5 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .pf .sub{font-size:13px;text-align:center;margin:4px 0 0;padding:0;color:#5a5d63}
 @media(max-width:1000px){.pfg{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.pfg{grid-template-columns:1fr}}
+.card .note{font-size:14px;color:#5a5d63;margin:0;font-style:italic}
+.card.or .note{color:var(--ink)}
