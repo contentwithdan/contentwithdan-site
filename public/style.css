@@ -96,3 +96,6 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .fbg>.fb{flex:0 0 calc((100% - 60px)/4);max-width:calc((100% - 60px)/4)}
 @media(max-width:1000px){.fbg>.fb{flex:0 0 calc((100% - 20px)/2);max-width:calc((100% - 20px)/2)}}
 @media(max-width:700px){.fbg>.fb{flex:0 0 100%;max-width:100%}}
+.cell.logo{overflow:hidden}
+.more{display:flex;justify-content:center;margin:28px 0 0}
+.more span{background:#FF5A1F;color:#fff;font-weight:700;font-size:18px;padding:10px 24px;border-radius:999px;border:2px solid var(--ink)}
