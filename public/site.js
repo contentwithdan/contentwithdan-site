@@ -34,4 +34,11 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isInte
 function step(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/dur),ease=1-Math.pow(1-k,3);el.textContent=fmt(el,to*ease);if(k<1)requestAnimationFrame(step);else el.textContent=fmt(el,to);}
 requestAnimationFrame(step);});},{threshold:0.3});
 els.forEach(function(el){io.observe(el);});})();
+
+/* Featured reach pills: drop into place when scrolled into view */
+(function(){var pills=[].slice.call(d.querySelectorAll('.rb'));if(!pills.length)return;
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce||!('IntersectionObserver' in window))return;
+pills.forEach(function(el){el.classList.add('pre');});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);e.target.classList.remove('pre');e.target.classList.add('drop');});},{threshold:0.3});
+pills.forEach(function(el){io.observe(el);});})();
 })();
