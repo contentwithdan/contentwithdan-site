@@ -157,5 +157,3 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 .rb.pre{opacity:0;transform:scale(1.9)}
 .rb.drop{animation:rb-drop .75s cubic-bezier(.2,.8,.3,1) both}
 @keyframes rb-drop{0%{opacity:0;transform:scale(1.9)}40%{opacity:1;transform:scale(.92)}65%{transform:scale(1.06)}85%{transform:scale(.98)}100%{opacity:1;transform:scale(1)}}
-/* header Work with me: bright orange */
-header .btn.or{background:#FF5A1F;color:#fff}
