@@ -134,3 +134,4 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 #contact .cph{height:520px;min-height:0}
 @media(max-width:1000px){#contact .cph{height:460px}}
 .btn.or,.card.or,.tag{color:#fff}.card.or *{color:#fff}.card.or .btn{color:var(--bg)}.card.or .pk li::before{background:#fff}
+.card.or .note{color:#fff!important}.btn.dark,.card.or .btn,nav a.btn{color:#fff}
