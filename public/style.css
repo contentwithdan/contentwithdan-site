@@ -161,3 +161,7 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 @media(max-width:1000px){.tag{font-size:11px;padding:6px 12px;letter-spacing:0}.ov{gap:12px}.ov h1{font-size:38px}}
 /* phone: zoom the hero photo in, like the laptop crop */
 @media(max-width:700px){.hero img.fg{transform:scale(1.4);transform-origin:50% 28%;object-position:50% 30%}}
+/* logo belt: only moves while it is on screen (starts from its first arrangement when scrolled to) */
+.mq .mq-track{animation-play-state:paused}
+.mq.run .mq-track{animation-play-state:running}
+.mq.run .mq-row:hover .mq-track{animation-play-state:paused}

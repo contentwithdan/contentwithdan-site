@@ -23,7 +23,7 @@ for(var r=0;r<3;r++){var row=d.createElement('div');row.className='mq-row';var t
 var part=cells.slice(r*per,(r+1)*per);part.forEach(function(c){tr.appendChild(c);});
 part.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');var im=k.querySelector('img');if(im)im.setAttribute('alt','');tr.appendChild(k);});
 row.appendChild(tr);wrap.appendChild(row);}
-g.parentNode.replaceChild(wrap,g);})();
+g.parentNode.replaceChild(wrap,g);if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){wrap.classList.toggle('run',e.isIntersecting);});},{threshold:0.35}).observe(wrap);}else{wrap.classList.add('run');}})();
 
 /* Count-up numbers (stats + featured reach badges) */
 (function(){var els=[].slice.call(d.querySelectorAll('[data-count]'));if(!els.length)return;
