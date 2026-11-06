@@ -14,4 +14,14 @@ var form=d.querySelector('form');
 if(form)form.addEventListener('submit',function(e){if(form.action.indexOf('FORM_ENDPOINT')>-1){e.preventDefault();var f=new FormData(form);location.href='mailto:'+form.getAttribute('data-email')+'?subject='+encodeURIComponent('Brief from '+f.get('name')+' ('+f.get('brand')+')')+'&body='+encodeURIComponent('Budget: '+f.get('budget')+'\n\n'+f.get('message'));}});
 var links=[].slice.call(d.querySelectorAll('nav a[href^="#"]')).filter(function(a){return !a.classList.contains('btn');});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){var on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});});},{rootMargin:'-30% 0px -60% 0px'});d.querySelectorAll('.pg').forEach(function(s){io.observe(s);});}
+
+/* Brand logos: conveyor-belt rows (alternating direction). Falls back to the static grid if reduced motion is requested. */
+(function(){var g=d.querySelector('#brands .g9');if(!g)return;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var cells=[].slice.call(g.children);if(cells.length<9)return;var per=Math.ceil(cells.length/3);
+var wrap=d.createElement('div');wrap.className='mq';var dur=[52,46,58];
+for(var r=0;r<3;r++){var row=d.createElement('div');row.className='mq-row';var tr=d.createElement('div');tr.className='mq-track '+(r%2===0?'rtl-rev':'rtl');tr.style.animationDuration=dur[r]+'s';
+var part=cells.slice(r*per,(r+1)*per);part.forEach(function(c){tr.appendChild(c);});
+part.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');var im=k.querySelector('img');if(im)im.setAttribute('alt','');tr.appendChild(k);});
+row.appendChild(tr);wrap.appendChild(row);}
+g.parentNode.replaceChild(wrap,g);})();
 })();

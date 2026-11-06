@@ -135,3 +135,14 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 @media(max-width:1000px){#contact .cph{height:460px}}
 .btn.or,.card.or,.tag{color:#fff}.card.or *{color:#fff}.card.or .btn{color:var(--bg)}.card.or .pk li::before{background:#fff}
 .card.or .note{color:#fff!important}.btn.dark,.card.or .btn,nav a.btn{color:#fff}
+/* conveyor-belt brand logos */
+.mq{display:flex;flex-direction:column;gap:20px;overflow:hidden;padding:2px 0}
+.mq-row{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.mq-track{display:flex;gap:20px;width:max-content;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform}
+.mq-track .cell{flex:0 0 130px;width:130px;height:130px}
+.mq-track.rtl{animation-name:mq-left}.mq-track.rtl-rev{animation-name:mq-right}
+.mq-row:hover .mq-track{animation-play-state:paused}
+@keyframes mq-left{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 10px))}}
+@keyframes mq-right{from{transform:translateX(calc(-50% - 10px))}to{transform:translateX(0)}}
+@media(max-width:700px){.mq-track .cell{flex-basis:96px;width:96px;height:96px}.mq,.mq-track{gap:12px}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
