@@ -146,3 +146,7 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 @keyframes mq-right{from{transform:translateX(calc(-50% - 10px))}to{transform:translateX(0)}}
 @media(max-width:700px){.mq-track .cell{flex-basis:96px;width:96px;height:96px}.mq,.mq-track{gap:12px}}
 @media(prefers-reduced-motion:reduce){.mq-track{animation:none}}
+/* count-up reach badge on featured videos */
+.rb{position:absolute;left:98px;top:-14px;background:var(--or);color:#fff;border:2px solid var(--ink);border-radius:999px;padding:5px 12px;font:700 13px 'DM Sans',sans-serif;white-space:nowrap;font-variant-numeric:tabular-nums;z-index:2}
+.rb span{display:inline-block;min-width:3.2ch;text-align:right}
+.big span{font-variant-numeric:tabular-nums}
