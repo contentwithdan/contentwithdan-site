@@ -127,3 +127,9 @@ dialog{border:0;border-radius:20px;padding:0;background:#000;width:min(92vw,960p
 #contact .g2{align-items:center}
 #contact .cph{height:460px;min-height:0}
 #contact .col .row{justify-content:flex-start;margin-top:4px}
+#contact .g2{align-items:stretch}
+#contact .cph{height:auto;min-height:460px}
+#contact .col{justify-content:center}
+#contact .g2{align-items:center}
+#contact .cph{height:520px;min-height:0}
+@media(max-width:1000px){#contact .cph{height:460px}}
